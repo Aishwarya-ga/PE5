@@ -1,4 +1,8 @@
-package com.pe5;
+/*Create a Student class that represents the following information of a
+* student: id, name, and age allthe member variables should be private .
+* Implement `getter and setter`
+*/
+package com.stackroute.pe5;
 
 public class Student {
     private int id;
@@ -10,37 +14,29 @@ public class Student {
         this.name = name;
         this.age= age;
     }
-
-
-
-
-        public int getId () {
+    public int getId () {
         return id;
     }
-
-        public void setId ( int id){
+    public void setId ( int id){
         this.id = id;
     }
-
-        public String getName () {
+    public String getName () {
         return name;
     }
-
-        public void setName (String name){
+    public void setName (String name){
         this.name = name;
     }
-
-        public int getAge () {
+    public int getAge () {
         return age;
     }
-
-        public void setAge ( int age){
+    public void setAge ( int age){
         if(age>=5 && age<=100) {
             this.age = age;
         }
     }
-        @Override
-        public String toString () {
+
+    @Override
+    public String toString () {
         return "Student{" +
                 "id=" + id +
                 ", name='" + name + '\'' +

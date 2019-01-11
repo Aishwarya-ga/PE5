@@ -1,11 +1,17 @@
-package com.pe5;
+/*Write a Java program to update specific array element by given element and empty the  array list
+*        Input: [Apple, Grape, Melon, Berry]
+*        Output: [Kiwi, Grape, Mango, Berry]
+*        Array list  after removing all elements []*/
+package com.stackroute.pe5;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class UpdateSpecificArrayElement {
-    public List<String> upSpecificElement(List<String> inputString, String keyword){
+    /*
+    method to update specific element in array
+     */
+    public List<String> updateSpecificElement(List<String> inputString, String keyword){
         if(!(inputString.isEmpty())) {
             List<String> string = new ArrayList<>();
             for (int i = 0; i < inputString.size(); i++) {
@@ -19,22 +25,12 @@ public class UpdateSpecificArrayElement {
         }
         return null;
     }
+    /*
+    method to empty the arrayList
+     */
     public List<String> toEmptyArrayList(List<String> inputString){
         inputString.clear();
-
         return inputString;
-    }
-
-    public static void main(String[] args){
-        UpdateSpecificArrayElement updateSpecificArrayElement = new UpdateSpecificArrayElement();
-        List<String> input = new ArrayList<String>();
-        input.add("apple");
-        input.add("grape");
-        input.add("melon");
-        input.add("berry");
-        System.out.println(updateSpecificArrayElement.upSpecificElement(input,"apple"));
-        System.out.println(updateSpecificArrayElement.toEmptyArrayList(input));
-
     }
 
 }

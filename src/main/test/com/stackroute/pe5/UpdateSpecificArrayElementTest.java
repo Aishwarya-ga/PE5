@@ -1,11 +1,10 @@
-package com.pe5;
+package com.stackroute.pe5;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 import static org.junit.Assert.*;
@@ -37,7 +36,7 @@ public class UpdateSpecificArrayElementTest {
         input.add("grape");
         input.add("melon");
         input.add("berry");
-        List<String> actual = updateSpecificArrayElement.upSpecificElement(input,"apple");
+        List<String> actual = updateSpecificArrayElement.updateSpecificElement(input,"apple");
         assertEquals(expected,actual);
     }
 
@@ -46,6 +45,6 @@ public class UpdateSpecificArrayElementTest {
         List<String> expected = null;
         List<String> list = new ArrayList<>();
         list.add("");
-        List<String> actual = updateSpecificArrayElement.upSpecificElement(list," ");
+        List<String> actual = updateSpecificArrayElement.updateSpecificElement(list," ");
     }
 }

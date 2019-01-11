@@ -1,4 +1,4 @@
-package com.pe5;
+package com.stackroute.pe5;
 
 import org.junit.After;
 import org.junit.Before;
@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 import static org.junit.Assert.*;
 
-public class ManifestTest {
+public class MainTestTest {
     MainTest mainTest;
     @Before
     public void setUp() throws Exception {
@@ -29,6 +29,7 @@ public class ManifestTest {
         students[3] = new Student(3, "komal", 55);
         students[4] = new Student(7, "hima", 28);
         students[5] = new Student(10, "meghana", 20);
+
         ArrayList<Student> expectedValue = new ArrayList<>();
         expectedValue.add(new Student(3, "komal", 55));
         expectedValue.add(new Student(2, "neetu", 29));
@@ -49,6 +50,7 @@ public class ManifestTest {
         s[3] = new Student(3, "komal", 55);
         s[4] = new Student(7, "hima", 28);
         s[5] = new Student(10, "meghana", 20);
+
         ArrayList<Student> expectedValue = new ArrayList<>();
         expectedValue.add(new Student(3, "komal", 55));
         expectedValue.add(new Student(2, "neetu", 29));
@@ -56,7 +58,6 @@ public class ManifestTest {
         expectedValue.add(new Student(10, "meghana", 20));
         expectedValue.add(new Student(1, "aishu", 19));
         expectedValue.add(new Student(7, "shalini", 19));
-
 
         assertNotEquals(expectedValue.toString(),mainTest.sort(s,6).toString());
     }

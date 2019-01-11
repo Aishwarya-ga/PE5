@@ -19,7 +19,8 @@ public class SortItemsInArrayListTest {
     public void tearDown() throws Exception {
         sortItemsInArrayList = null;
     }
-
+    /* method to test Success
+     */
     @Test
     public void toSortArrayListSuccess() {
         ArrayList<String> expected = new ArrayList<String>() {
@@ -35,6 +36,7 @@ public class SortItemsInArrayListTest {
         ArrayList<String> actual = sortItemsInArrayList.toSortArrayList(input);
         assertEquals(expected,actual);
     }
+    /* method to test failure*/
     @Test
     public void toSortArrayListFailure(){
         ArrayList<String> expected = null;

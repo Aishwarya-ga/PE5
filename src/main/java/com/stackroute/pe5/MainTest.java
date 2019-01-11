@@ -7,28 +7,24 @@
 package com.stackroute.pe5;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class MainTest {
     List<Student> studList = new ArrayList<>();
     //creating the object for StudentSorter class
-    StudentSorter studentSorter = new StudentSorter();
+   StudentSorter studentSorter = new StudentSorter();
     /*
     method to sort names
      */
-    public List<Student> sort(Student[]student,int n){
-        for(int i=0;i<n-1;i++){
-            for(int j=i+1;j<n;j++){
-                //condition to compare two student name and sort
-                if(studentSorter.compare(student[i],student[j])<1){
-                    Student temp = student[i];
-                    student[i] = student[j];
-                    student[j] = temp;
-                }
-            }
+    public List<Student> sort(ArrayList<Student> students){
+        if(students.isEmpty()){
+            return null;
         }
-        for(int i=0;i<6;i++)
-            studList.add(student[i]);
-        return studList;
+        Collections.sort(students,studentSorter);
+        for(Student str: students){
+            System.out.println(str);
+        }
+        return students;
     }
 }

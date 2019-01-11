@@ -20,7 +20,9 @@ public class UpdateSpecificArrayElementTest {
     public void tearDown() throws Exception {
         updateSpecificArrayElement = null;
     }
-
+    /* method to test Success case to update specific
+        element in the array
+     */
     @Test
     public void upSpecificElementSuccess() {
         List<String> expected = new ArrayList<>() {
@@ -39,7 +41,9 @@ public class UpdateSpecificArrayElementTest {
         List<String> actual = updateSpecificArrayElement.updateSpecificElement(input,"apple");
         assertEquals(expected,actual);
     }
-
+    /* method to test failure case to check when input
+        is null
+     */
     @Test
     public void upSpecificElementFailure() {
         List<String> expected = null;

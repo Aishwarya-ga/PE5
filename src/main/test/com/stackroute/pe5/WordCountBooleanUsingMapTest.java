@@ -20,7 +20,10 @@ public class WordCountBooleanUsingMapTest {
     public void tearDown() throws Exception {
         wordCountBooleanUsingMap = null;
     }
-
+    /* method to test Success case to count the number
+        of character an return true if count in more than
+        1 and false if count is lesser than 1
+     */
     @Test
     public void toReturnBooleanBasedOnCountSuccess() {
         Map<String,Boolean> expected = new HashMap<String,Boolean>() {
@@ -36,7 +39,9 @@ public class WordCountBooleanUsingMapTest {
         Map<String,Boolean> actual = wordCountBooleanUsingMap.toReturnBooleanBasedOnCount(arr);
         assertEquals(expected,actual);
     }
-
+    /* method to test failure case to count the number
+        of words when string is not characters
+     */
     @Test
     public void toReturnBooleanBasedOnCountFailure(){
         String arr[] = {"$","%","^"};

@@ -20,7 +20,9 @@ public class ToSetKeyValuePairTest {
     public void tearDown() throws Exception {
         toSetKeyValuePair = null;
     }
-
+    /* method to test Success case Set the key
+        value
+     */
     @Test
     public void toSetKeyValueSuccess() {
         Map<String,String> input = new TreeMap<String, String>();
@@ -32,6 +34,9 @@ public class ToSetKeyValuePairTest {
         assertEquals(expectedValue,toSetKeyValuePair.toSetKeyValue(input));
 
     }
+    /* method to test failure of updation of
+        key value
+     */
     @Test
     public void testTwoKeyValueMethodFailure() {
         Map<String,String> input = new TreeMap<String, String>();
@@ -43,6 +48,7 @@ public class ToSetKeyValuePairTest {
         assertNotEquals(expectedValue,toSetKeyValuePair.toSetKeyValue(input));
 
     }
+    /* method to check when the input is null*/
     @Test
     public void testTwoKeyValueMethodNeutral() {
         Map<String,String> input = new TreeMap<String, String>();
@@ -53,10 +59,6 @@ public class ToSetKeyValuePairTest {
         expectedValue.put("val2", " ");
         assertEquals(expectedValue,toSetKeyValuePair.toSetKeyValue(input));
 
-    }
-    @Test(expected = NullPointerException.class)
-    public void invalidTest() {
-        assertNull(toSetKeyValuePair.toSetKeyValue(null));
     }
 
 }

@@ -20,7 +20,9 @@ public class WordCountUsingMapTest {
     public void tearDown() throws Exception {
         wordCountUsingMap = null;
     }
-
+    /* method to test Success case to count the number
+        of words
+     */
     @Test
     public void toCountWordNumberSuccess() {
         Map<String,Integer> expected = new HashMap<String,Integer>() {
@@ -33,7 +35,9 @@ public class WordCountUsingMapTest {
         Map<String,Integer> actual = wordCountUsingMap.toCountWordNumber("one one -one___two,,three,one @three*one?two");
         assertEquals(expected,actual) ;
     }
-
+    /* method to test failure case to count the number
+        of words
+     */
     @Test
     public void toCountWordNumberSuccessFailure(){
        assertNotNull(wordCountUsingMap.toCountWordNumber("$%2435213"));

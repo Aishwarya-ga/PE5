@@ -19,46 +19,70 @@ public class MainTestTest {
     public void tearDown() throws Exception {
         mainTest = null;
     }
-
+    /* method to test Success if there is difference
+        age
+     */
     @Test
-    public void sortSuccess() {
-        Student[] students = new Student[6];
-        students[0] = new Student(1, "aishu", 19);
-        students[1]= new Student(2 ,"neetu", 29);
-        students[2] = new Student(4, "shalini", 19);
-        students[3] = new Student(3, "komal", 55);
-        students[4] = new Student(7, "hima", 28);
-        students[5] = new Student(10, "meghana", 20);
+    public void sortSuccessDifferAge() {
 
         ArrayList<Student> expectedValue = new ArrayList<>();
-        expectedValue.add(new Student(3, "komal", 55));
-        expectedValue.add(new Student(2, "neetu", 29));
-        expectedValue.add(new Student(7, "hima", 28));
-        expectedValue.add(new Student(10, "meghana", 20));
-        expectedValue.add(new Student(1, "aishu", 19));
-        expectedValue.add(new Student(4, "shalini", 19));
+        expectedValue.add(new Student(505, "aishu", 20));
+        expectedValue.add(new Student(809, "neetu", 22));
+        expectedValue.add(new Student(101, "shalini", 24));
 
-        assertEquals(expectedValue.toString(),mainTest.sort(students,6).toString());
+        ArrayList<Student> arraylist = new ArrayList<Student>();
+        arraylist.add(new Student(101, "shalini", 24));
+        arraylist.add(new Student(505, "aishu", 20));
+        arraylist.add(new Student(809, "neetu", 22));
+
+        assertEquals(expectedValue.toString(),mainTest.sort(arraylist).toString());
 
     }
+    /* method to test Success if there is same
+       age
+    */
     @Test
-    public void testSortFailure() {
-        Student[] s = new Student[6];
-        s[0] = new Student(1, "aishu", 19);
-        s[1]= new Student(2 ,"neetu", 29);
-        s[2] = new Student(4, "shalini", 19);
-        s[3] = new Student(3, "komal", 55);
-        s[4] = new Student(7, "hima", 28);
-        s[5] = new Student(10, "meghana", 20);
+    public void sortSuccessSameAge() {
 
         ArrayList<Student> expectedValue = new ArrayList<>();
-        expectedValue.add(new Student(3, "komal", 55));
-        expectedValue.add(new Student(2, "neetu", 29));
-        expectedValue.add(new Student(7, "hima", 28));
-        expectedValue.add(new Student(10, "meghana", 20));
-        expectedValue.add(new Student(1, "aishu", 19));
-        expectedValue.add(new Student(7, "shalini", 19));
+        expectedValue.add(new Student(505, "aishu", 22));
+        expectedValue.add(new Student(809, "neetu", 22));
+        expectedValue.add(new Student(101, "shalini", 24));
 
-        assertNotEquals(expectedValue.toString(),mainTest.sort(s,6).toString());
+        ArrayList<Student> arraylist = new ArrayList<Student>();
+        arraylist.add(new Student(101, "shalini", 24));
+        arraylist.add(new Student(505, "aishu", 22));
+        arraylist.add(new Student(809, "neetu", 22));
+
+        assertEquals(expectedValue.toString(),mainTest.sort(arraylist).toString());
+
+    }
+    /* method to test Success if there is same
+      age and name
+   */
+    @Test
+    public void sortSuccessSameAgeName() {
+
+        ArrayList<Student> expectedValue = new ArrayList<>();
+        expectedValue.add(new Student(505, "aishu", 22));
+        expectedValue.add(new Student(809, "aishu", 22));
+        expectedValue.add(new Student(101, "shalini", 24));
+
+        ArrayList<Student> arraylist = new ArrayList<Student>();
+        arraylist.add(new Student(101, "shalini", 24));
+        arraylist.add(new Student(505, "aishu", 22));
+        arraylist.add(new Student(809, "aishu", 22));
+
+        assertEquals(expectedValue.toString(),mainTest.sort(arraylist).toString());
+
+    }
+    /* method to test failure when the arrayList
+        is empty
+   */
+    @Test
+    public void testSortFailure() {
+
+        ArrayList<Student> expectedValue = new ArrayList<>(){};
+        assertNull(mainTest.sort(expectedValue));
     }
 }

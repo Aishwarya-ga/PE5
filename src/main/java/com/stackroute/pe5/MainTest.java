@@ -29,7 +29,6 @@ public class MainTest {
         }
         for(int i=0;i<6;i++)
             studList.add(student[i]);
-
         return studList;
     }
 }

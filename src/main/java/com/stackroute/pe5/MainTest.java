@@ -19,7 +19,7 @@ public class MainTest {
     public List<Student> sort(Student[]student,int n){
         for(int i=0;i<n-1;i++){
             for(int j=i+1;j<n;j++){
-                //
+                //condition to compare two student name and sort
                 if(studentSorter.compare(student[i],student[j])<1){
                     Student temp = student[i];
                     student[i] = student[j];

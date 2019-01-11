@@ -230,11 +230,11 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.MainTestTest" />
       <item itemvalue="JUnit.ManifestTest" />
       <item itemvalue="JUnit.ManifestTest.sortSuccess" />
       <item itemvalue="JUnit.ManifestTest.testSortFailure" />
       <item itemvalue="JUnit.ToSetKeyValuePairTest" />
-      <item itemvalue="JUnit.MainTestTest" />
     </list>
     <recent_temporary>
       <list>

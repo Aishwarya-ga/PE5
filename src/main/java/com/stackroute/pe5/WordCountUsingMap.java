@@ -19,6 +19,7 @@ public class WordCountUsingMap {
             for (String word : words) {
                 String keyword = word.toLowerCase();
                 if (map.containsKey(keyword)) {
+
                     map.put(keyword, map.get(keyword) + 1);
                 } else {
                     map.put(keyword, 1);
